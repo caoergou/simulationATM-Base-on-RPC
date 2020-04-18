@@ -120,7 +120,7 @@ public class BaseDAO {
     public double InMoney(String id, double money) {//存钱
         Statement st = null;
         Connection conn = null;
-        String sql = "update  Cardmessage set money =? where CardNum=?";
+        String sql = "update  bankuser set user_money =? where username=?";
         double money_after = 0;
         try {
             Connection c = getConnection();
@@ -142,7 +142,7 @@ public class BaseDAO {
     public double OutMoney(String id, double money) {//取钱
         Statement st = null;
         Connection conn = null;
-        String sql = "update  Cardmessage set money =? where CardNum=?";
+        String sql = "update bankuser set user_money =? where username=?";
         double money_after = 0;
         try {
             Connection c = getConnection();
