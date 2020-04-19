@@ -157,6 +157,7 @@ public class BaseDAO {
             money_after = money_before - money;
             if(money_after<0){
                 //需要判断
+
                 return 2;
             }
             String sql = "update  bankuser set user_money =\'"+money_after+"\'"+ "where user_name="+"\'"+id+"\'";
