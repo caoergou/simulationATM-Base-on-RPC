@@ -56,7 +56,6 @@ public class OutMoney implements ActionListener{
                 RMIClient.OutMoney(LoginGui.id,Integer.parseInt(money.getText()));
                 JOptionPane.showMessageDialog(null, "取款成功");//弹窗
                 yue.setText("账户余额:"+ RMIClient.ClientInquryMoney(LoginGui.id));//更新余额显示
-
         }
         else
         {
