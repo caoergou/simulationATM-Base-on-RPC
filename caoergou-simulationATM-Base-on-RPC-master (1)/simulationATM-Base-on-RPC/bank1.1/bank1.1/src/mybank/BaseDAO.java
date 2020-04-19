@@ -80,9 +80,10 @@ public class BaseDAO {
         try {
             conn = getConnection();
             String sql = "select user_money from bankuser where user_name= \'" + id+"\'";
-            PreparedStatement preparedStatement = conn.prepareStatement(sql);
-            ResultSet resultSet = preparedStatement.executeQuery();
+//            PreparedStatement preparedStatement = conn.prepareStatement(sql);
+//            ResultSet resultSet = preparedStatement.executeQuery();
             st = conn.createStatement();
+            ResultSet resultSet=st.executeQuery(sql);
             while (resultSet.next()) {
                 money = resultSet.getDouble("user_money");
             }
@@ -94,19 +95,18 @@ public class BaseDAO {
         return money;
     }
 
-    public static Object[][] InqueryOperation(String id) {//查记录
+    public static List<Object[]> InqueryOperation(String id) {//查记录
         Statement st = null;
-        Connection conn = null;
-        List<Object[]> list = new LinkedList();
+       Connection conn = null;
+        System.out.println("id="+id);
+        List<Object[]> list = new LinkedList<>();
         try {
-            Connection c = getConnection();
+             conn = getConnection();
             String sql = "select * from user_record where user_name=\'" + id+"\'";
-            PreparedStatement preparedStatement = c.prepareStatement(sql);
+            PreparedStatement preparedStatement = conn.prepareStatement(sql);
             ResultSet resultSet = preparedStatement.executeQuery();
-            assert false;
-            st = conn.createStatement();
             while (resultSet.next()) {
-                Object[] objects = new Object[] { resultSet.getInt("record_datetime"), resultSet.getString("record_type"),
+                Object[] objects = new Object[] { resultSet.getDate("record_datetime"), resultSet.getString("record_type"),
                         resultSet.getDouble("record_money") ,resultSet.getString("goalname")};
                 list.add(objects);
             }
@@ -115,23 +115,28 @@ public class BaseDAO {
         } finally {
             connectionUtil.closeAll(st, conn);
         }
-        return list.toArray(new Object[0][0]);
+
+        System.out.println(list);
+
+        return list;
     }
 
     public static double InMoney(String id, double money) {//存钱
         Statement st = null;
         Connection conn = null;
-        String sql = "update  bankuser set user_money =? where user_name=?";
+//        System.out.println("before money:"+money);
         double money_after = 0;
         try {
-            Connection c = getConnection();
-            PreparedStatement preparedStatement = c.prepareStatement(sql);
+            conn = getConnection();
+//            PreparedStatement preparedStatement = c.prepareStatement(sql);
             st = conn.createStatement();
             double money_before = InquryMoney(id);
             money_after = money_before + money;
-            preparedStatement.setDouble(1, money_after);
-            preparedStatement.setString(2, id);
-            preparedStatement.execute();
+            String sql = "update  bankuser set user_money =\'"+money_after+"\'"+ "where user_name="+"\'"+id+"\'";
+            st.execute(sql);
+//            preparedStatement.setDouble(1, money_after);
+//            preparedStatement.setString(2, id);
+//            preparedStatement.execute();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -143,17 +148,22 @@ public class BaseDAO {
     public static double OutMoney(String id, double money) {//取钱
         Statement st = null;
         Connection conn = null;
-        String sql = "update bankuser set user_money =? where user_name=?";
         double money_after = 0;
         try {
-            Connection c = getConnection();
-            PreparedStatement preparedStatement = c.prepareStatement(sql);
+             conn= getConnection();
+//            PreparedStatement preparedStatement = c.prepareStatement(sql);
             st = conn.createStatement();
             double money_before = InquryMoney(id);
             money_after = money_before - money;
-            preparedStatement.setDouble(1, money_after);
-            preparedStatement.setString(2, id);
-            preparedStatement.execute();
+            if(money_after<0){
+                //需要判断
+                return 2;
+            }
+            String sql = "update  bankuser set user_money =\'"+money_after+"\'"+ "where user_name="+"\'"+id+"\'";
+            st.execute(sql);
+//            preparedStatement.setDouble(1, money_after);
+//            preparedStatement.setString(2, id);
+//            preparedStatement.execute();
         } catch (Exception e) {
             e.printStackTrace();
         }

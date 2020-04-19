@@ -3,6 +3,7 @@ import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
+import java.util.*;
 
 public class RMIClient {
     private static final int REGISTRY_PORT = 1099;
@@ -28,11 +29,12 @@ public class RMIClient {
         }
         return money;
     }
-    public static Object[][] ClientInquryOperation(String id){
-        Object[][] oper = new Object[100][];
+    public static List<Object[]> ClientInquryOperation(String id){
+        List <Object[]> oper = new ArrayList<>();
+
         try {
             RemoteService handler=(RemoteService) Naming.lookup(SERVICE_URL+"/Account");
-            oper = handler.InquryOperation(id);
+            oper = Collections.singletonList(handler.InquryOperation(id));
         } catch (NotBoundException | RemoteException | MalformedURLException e) {
             e.printStackTrace();
         }

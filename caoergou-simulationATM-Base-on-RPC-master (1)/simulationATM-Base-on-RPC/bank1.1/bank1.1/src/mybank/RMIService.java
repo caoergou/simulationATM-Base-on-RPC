@@ -2,6 +2,7 @@ package mybank;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.List;
 
 public class RMIService extends Account implements RemoteService {
     protected RMIService() throws RemoteException {
@@ -17,7 +18,7 @@ public class RMIService extends Account implements RemoteService {
         Account acc=new Account();
         return acc.InquryMoney(id);
     }
-    public Object[][] InquryOperation(String id) {
+    public List<Object[]> InquryOperation(String id) {
         Account acc=new Account();
         return acc.InquryOperation(id);
     }

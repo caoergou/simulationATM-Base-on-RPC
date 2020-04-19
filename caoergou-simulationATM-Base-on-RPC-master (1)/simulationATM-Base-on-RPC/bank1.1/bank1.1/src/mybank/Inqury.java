@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Arrays;
+import java.util.List;
 
 public class Inqury implements ActionListener{
     public JFrame iframe;
@@ -38,16 +39,19 @@ public class Inqury implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getActionCommand().equals("查询记录"));
+        if(e.getActionCommand().equals("查询记录"))
         {
             StringBuilder result = new StringBuilder();
-            Object[][] oper = RMIClient.ClientInquryOperation(LoginGui.id);
+            List<Object> oper=new List<Object>();
             //JOptionPane.showMessageDialog(iframe, oper);
-            for(int i=0;i<oper.length;i++) {
-                if(oper[i]!=null)
-                    result.append(Arrays.toString(oper[i])).append("\n");
 
+            for (Object[] objects : oper) {
+                if (objects != null) {
+                    result.append(Arrays.toString(objects)).append("\n");
+                    inquryresult.setText(Arrays.toString(objects));//去除掉结果字符串中的null,并将元替换为元\r\n来换行换行
+                }
             }
+
             inquryresult.setText(result.toString());//去除掉结果字符串中的null,并将元替换为元\r\n来换行换行
 //            yue.setText("账户余额:"+Test.currentAccount.money);//更新显示余额
         }

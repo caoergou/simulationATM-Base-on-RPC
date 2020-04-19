@@ -3,6 +3,7 @@ package mybank;
 import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 public class Account {
     double money;
@@ -28,7 +29,7 @@ public class Account {
     public double InquryMoney(String id){
         return BaseDAO.InquryMoney(id);
     }
-    public Object[][] InquryOperation(String id){
+    public List<Object[]> InquryOperation(String id){
         return BaseDAO.InqueryOperation(id);
 
     }
