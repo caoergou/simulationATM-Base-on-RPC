@@ -95,7 +95,7 @@ public class BaseDAO {
         return money;
     }
 
-    public static List<Object[]> InqueryOperation(String id) {//查记录
+    public static String[] InqueryOperation(String id) {//查记录
         Statement st = null;
        Connection conn = null;
         System.out.println("id="+id);

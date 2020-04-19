@@ -42,7 +42,6 @@ public class Inqury implements ActionListener{
         if(e.getActionCommand().equals("查询记录"))
         {
             StringBuilder result = new StringBuilder();
-            List<Object> oper=new List<Object>();
             //JOptionPane.showMessageDialog(iframe, oper);
 
             for (Object[] objects : oper) {

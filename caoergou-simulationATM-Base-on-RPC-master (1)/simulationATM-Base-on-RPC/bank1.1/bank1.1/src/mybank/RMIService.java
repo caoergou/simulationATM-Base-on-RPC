@@ -18,7 +18,7 @@ public class RMIService extends Account implements RemoteService {
         Account acc=new Account();
         return acc.InquryMoney(id);
     }
-    public List<Object[]> InquryOperation(String id) {
+    public String[] InquryOperation(String id) {
         Account acc=new Account();
         return acc.InquryOperation(id);
     }
