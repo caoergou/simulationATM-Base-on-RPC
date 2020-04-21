@@ -42,11 +42,12 @@ public class Inqury implements ActionListener{
         if(e.getActionCommand().equals("查询记录"))
         {
             StringBuilder result = new StringBuilder();
+            List<Object[]>  oper = RMIClient.ClientInquryOperation(LoginGui.id);
             //JOptionPane.showMessageDialog(iframe, oper);
 
             for (Object objects : oper) {
                 if (objects != null) {
-                    result.append(Arrays.toString(objects)).append("\n");
+                    result.append(Arrays.toString(objects).append("\n");
                     inquryresult.setText(Arrays.toString(objects));//去除掉结果字符串中的null,并将元替换为元\r\n来换行换行
                 }
             }

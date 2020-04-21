@@ -58,7 +58,8 @@ public class BaseDAO {
         System.out.println("password="+password);
         try {
             conn = getConnection();
-            String sql = "select user_password from bankuser where user_name=\'" + id+"\'";
+            System.out.println(conn);
+            String sql = "select user_password from bankuser where user_name=\'" + id +"\'";
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
             ResultSet resultSet = preparedStatement.executeQuery();
             st = conn.createStatement();
@@ -95,11 +96,12 @@ public class BaseDAO {
         return money;
     }
 
-    public static String[] InqueryOperation(String id) {//查记录
+    public static List<Object[]>  InquryOperation(String id) {//查记录
         Statement st = null;
        Connection conn = null;
         System.out.println("id="+id);
         List<Object[]> list = new LinkedList<>();
+        String[] list1 = new String[100];
         try {
              conn = getConnection();
             String sql = "select * from user_record where user_name=\'" + id+"\'";
@@ -107,7 +109,7 @@ public class BaseDAO {
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 Object[] objects = new Object[] { resultSet.getDate("record_datetime"), resultSet.getString("record_type"),
-                        resultSet.getDouble("record_money") ,resultSet.getString("goalname")};
+                        resultSet.getDouble("record_money") ,"目标账户",resultSet.getString("goalname")};
                 list.add(objects);
             }
         } catch (Exception e) {
@@ -133,7 +135,9 @@ public class BaseDAO {
             double money_before = InquryMoney(id);
             money_after = money_before + money;
             String sql = "update  bankuser set user_money =\'"+money_after+"\'"+ "where user_name="+"\'"+id+"\'";
+            String sql1 = "insert into user_record (record_datetime,user_name,record_type,record_money,goalname)values(NOW(),\'"+ id + "\','存款',"+money+",\'"+id+"\')";
             st.execute(sql);
+            st.execute(sql1);
 //            preparedStatement.setDouble(1, money_after);
 //            preparedStatement.setString(2, id);
 //            preparedStatement.execute();
@@ -161,7 +165,9 @@ public class BaseDAO {
                 return 2;
             }
             String sql = "update  bankuser set user_money =\'"+money_after+"\'"+ "where user_name="+"\'"+id+"\'";
+            String sql1 = "insert into user_record (record_datetime,user_name,record_type,record_money,goalname)values(NOW(),\'"+ id + "\','取款',"+money+",\'"+id+"\')";
             st.execute(sql);
+            st.execute(sql1);
 //            preparedStatement.setDouble(1, money_after);
 //            preparedStatement.setString(2, id);
 //            preparedStatement.execute();

@@ -29,10 +29,13 @@ public class Account {
     public double InquryMoney(String id){
         return BaseDAO.InquryMoney(id);
     }
-    public List<Object[]> InquryOperation(String id){
+   /* public List<Object[]> InquryOperation(String id){
         return BaseDAO.InqueryOperation(id);
 
-    }
+    }*/
+   public List<Object[]>  InquryOperation(String id) {
+       return BaseDAO.InquryOperation(id);
+   }
     protected int OutMoney(String id, int money) {
         return (int) BaseDAO.OutMoney(id,money);
     }

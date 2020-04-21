@@ -4,7 +4,7 @@ package mybank;
 import java.sql.*;
 
 public class connectionUtil {
-    private static final String url = "jdbc:mysql://localhost:3306/ds?serverTimezone=UTC";
+    private static final String url = "jdbc:mysql://localhost:3306/bankWithDistributedComputing?serverTimezone=UTC";
 
     /**
      * 连接数据库的用户名
@@ -21,7 +21,7 @@ public class connectionUtil {
     private static final String driver = "com.mysql.cj.jdbc.Driver";
 
     public static Connection getConnection() throws ClassNotFoundException, SQLException {
-        Class.forName("com.mysql.cj.jdbc.Driver");
+        Class.forName(driver);
         return DriverManager.getConnection(url, user, password);
     }
 

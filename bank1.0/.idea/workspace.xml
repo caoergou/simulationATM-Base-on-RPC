@@ -1,7 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="216ed1d3-8f2c-4720-8735-954b82633063" name="Default Changelist" comment="" />
+    <list default="true" id="216ed1d3-8f2c-4720-8735-954b82633063" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank1.0.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/bank1.0/mybank/Account.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/bank1.0/mybank/BaseDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/bank1.0/mybank/InMoney.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/bank1.0/mybank/Inqury.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/bank1.0/mybank/LoginGui.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/bank1.0/mybank/Menu.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/bank1.0/mybank/OutMoney.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/bank1.0/mybank/RMIClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/bank1.0/mybank/RMIServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/bank1.0/mybank/RMIService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/bank1.0/mybank/RemoteService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mybank/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mybank/BaseDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mybank/InMoney.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mybank/Inqury.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mybank/LoginGui.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mybank/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mybank/OutMoney.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mybank/RMIClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mybank/RMIServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mybank/RMIService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mybank/RemoteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../caoergou-simulationATM-Base-on-RPC-master (1)/simulationATM-Base-on-RPC/bank1.1/bank1.1/src/mybank/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/../caoergou-simulationATM-Base-on-RPC-master (1)/simulationATM-Base-on-RPC/bank1.1/bank1.1/src/mybank/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../caoergou-simulationATM-Base-on-RPC-master (1)/simulationATM-Base-on-RPC/bank1.1/bank1.1/src/mybank/BaseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../caoergou-simulationATM-Base-on-RPC-master (1)/simulationATM-Base-on-RPC/bank1.1/bank1.1/src/mybank/BaseDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../caoergou-simulationATM-Base-on-RPC-master (1)/simulationATM-Base-on-RPC/bank1.1/bank1.1/src/mybank/Inqury.java" beforeDir="false" afterPath="$PROJECT_DIR$/../caoergou-simulationATM-Base-on-RPC-master (1)/simulationATM-Base-on-RPC/bank1.1/bank1.1/src/mybank/Inqury.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../caoergou-simulationATM-Base-on-RPC-master (1)/simulationATM-Base-on-RPC/bank1.1/bank1.1/src/mybank/LoginGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/../caoergou-simulationATM-Base-on-RPC-master (1)/simulationATM-Base-on-RPC/bank1.1/bank1.1/src/mybank/LoginGui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../caoergou-simulationATM-Base-on-RPC-master (1)/simulationATM-Base-on-RPC/bank1.1/bank1.1/src/mybank/RMIClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../caoergou-simulationATM-Base-on-RPC-master (1)/simulationATM-Base-on-RPC/bank1.1/bank1.1/src/mybank/RMIClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../caoergou-simulationATM-Base-on-RPC-master (1)/simulationATM-Base-on-RPC/bank1.1/bank1.1/src/mybank/RMIService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../caoergou-simulationATM-Base-on-RPC-master (1)/simulationATM-Base-on-RPC/bank1.1/bank1.1/src/mybank/RMIService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../caoergou-simulationATM-Base-on-RPC-master (1)/simulationATM-Base-on-RPC/bank1.1/bank1.1/src/mybank/RemoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../caoergou-simulationATM-Base-on-RPC-master (1)/simulationATM-Base-on-RPC/bank1.1/bank1.1/src/mybank/RemoteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../caoergou-simulationATM-Base-on-RPC-master (1)/simulationATM-Base-on-RPC/bank1.1/bank1.1/src/mybank/connectionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../caoergou-simulationATM-Base-on-RPC-master (1)/simulationATM-Base-on-RPC/bank1.1/bank1.1/src/mybank/connectionUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../caoergou-simulationATM-Base-on-RPC-master (1)/simulationATM-Base-on-RPC/bank1.1/bank1.1/src/mybank/test.java" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,11 +52,16 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1aYqlmp3VQA8p02s6WzvXHfkwzV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/mybank" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -97,10 +139,26 @@
       <option name="presentableId" value="Default" />
       <updated>1586923027434</updated>
       <workItem from="1586923030348" duration="12897000" />
+      <workItem from="1587263836135" duration="296000" />
+      <workItem from="1587264345690" duration="18000" />
+      <workItem from="1587267726577" duration="992000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

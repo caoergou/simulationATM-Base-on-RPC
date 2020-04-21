@@ -34,7 +34,7 @@ public class RMIClient {
 
         try {
             RemoteService handler=(RemoteService) Naming.lookup(SERVICE_URL+"/Account");
-            oper = Collections.singletonList(handler.InquryOperation(id));
+            oper = handler.InquryOperation(id);
         } catch (NotBoundException | RemoteException | MalformedURLException e) {
             e.printStackTrace();
         }

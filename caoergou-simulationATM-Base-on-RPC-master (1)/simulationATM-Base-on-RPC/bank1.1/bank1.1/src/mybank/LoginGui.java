@@ -88,6 +88,7 @@ public class LoginGui implements ActionListener{//实现监听器的接口
         }
         if(e.getActionCommand().equals("     登录     ")){
             boolean flag = RMIClient.ClientLogin(userName.getText(),passWord.getText());
+            System.out.println(flag);
             if(flag) {
                 JOptionPane.showMessageDialog(frame, "登录成功");
                 id = userName.getText();
