@@ -1,7 +1,7 @@
 package server;
 
 import java.util.List;
-
+import model.*;
 /**
  * Created by lyric on 18/3/27.
  */

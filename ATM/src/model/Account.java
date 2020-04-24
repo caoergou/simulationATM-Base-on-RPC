@@ -1,4 +1,4 @@
-package server;
+package model;
 
 import java.io.*;
 import java.text.SimpleDateFormat;
@@ -39,11 +39,11 @@ public class Account {
         return BaseDAO.InquryOperation(id);
     }
 
-    protected int OutMoney(String id, int money) {
+    public int OutMoney(String id, int money) {
         return (int) BaseDAO.OutMoney(id, money);
     }
 
-    protected int InMoney(String id, int money) {
+    public int InMoney(String id, int money) {
         return (int) BaseDAO.InMoney(id, money);
     }
 }

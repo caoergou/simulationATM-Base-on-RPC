@@ -2,16 +2,21 @@
 
 2020 分布式计算课程实践项目-重案组    
 手写RPC框架，简单实现了**多线程**、**负载均衡**、**AOP**，制作了Java的GUi界面，使用MySQL进行数据管理          
-负载均衡通过客户端的AOP实现，但是极其原始     
-使用AOP简单实现了对于多次登录的控制，但是代码的实现方式较为原始        
 
-#### 理解本项目所需的前置知识点 ：            
+### 理解本项目所需的前置知识点 ：            
 
 - 反射
 - 注入
 - 动态代理
 - AOP 即面向切面编程
 - RPC
+
+### 如何运行？
+
+1. 在本地运用`bank MySQL5.6.sql`中的sql语句建立MySQL数据库
+2. 在`server/ServerConfig.java`文件中，配置数据库连接、账号密码等
+3. 首先运行服务器`test/TestServer.java`或者`test/TestServer2.java`
+4. 运行客户端`test/TestClient.java`
 
 
 
@@ -21,7 +26,7 @@
 开发语言：`Java`   
 数据库：`MySQL 5.6`    
 版本管理功能：`Git`    
-代码托管平台：`Gitee.com`     
+代码托管平台：`Gitee.com` /`github.com`    
 
 ## 工作分工
 

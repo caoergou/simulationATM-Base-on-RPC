@@ -13,7 +13,7 @@ public class LoginGUI implements ActionListener {// 实现监听器的接口
     private final JPasswordField passWord, passwordCheck;
     private final JButton login;
     private final JButton register;
-    Boolean regirsterable = true;// 控制是否能注册的变量
+    Boolean regirsterable = false;// 控制是否能注册的变量
 
     public static String id; // 全局id
 
@@ -23,6 +23,8 @@ public class LoginGUI implements ActionListener {// 实现监听器的接口
         p0 = new JPanel();
 
         p0.add(new JLabel("中国农业银行ATM"));
+        p0.add(new JLabel("Design By 重案组"));
+        p0.add(new JLabel("2020软件协同设计"));
         frame.add(p0);
 
         p1 = new JPanel();

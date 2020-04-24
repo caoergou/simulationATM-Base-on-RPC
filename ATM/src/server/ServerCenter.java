@@ -20,9 +20,9 @@ public class ServerCenter implements Center {
 
     private static boolean isRunning = false;
 
-    private int port = 8080;
+    private int port ;
 
-    private String host = "127.0.0.1";
+    private String host ;
 
     public ServerCenter() {
     }
