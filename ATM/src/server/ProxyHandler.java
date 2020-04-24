@@ -48,6 +48,7 @@ public class ProxyHandler implements InvocationHandler {
 						ServerConfig.ErrorCount.put((String) args[0], 2);
 						result = 1;
 					} else {
+						ServerConfig.lockedAccount.add((String)args[0]);
 						result = -1;
 					}
 				}
