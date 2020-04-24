@@ -17,7 +17,7 @@ public class ServerConfig {
 
     public static final String url = "jdbc:mysql://localhost:3306/bank?serverTimezone=UTC";
     public static final String user = "root";
-    public static final String password = "Input Your MySQL Password Here";
+    public static final String password = "Mr.jingcheng";//"Input Your MySQL Password Here";
 
     //AOP相关配置
     public static final Boolean isEnableCheck = true;

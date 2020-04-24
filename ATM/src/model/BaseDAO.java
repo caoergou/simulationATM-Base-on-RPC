@@ -71,7 +71,7 @@ public class BaseDAO {
         } finally {
             connectionUtil.closeAll(st, conn);
         }
-        return password.equals(user_password)?1:0;
+        return password.equals(user_password)?0:1;
     }
 
     public static double InquryMoney(String id) {// 查余额
@@ -174,5 +174,22 @@ public class BaseDAO {
             connectionUtil.closeAll(st, conn);
         }
         return money_after;
+    }
+
+    public static void OutMoneyLog(String id, double money,double money_after) {// 取钱日志写入
+        Statement st = null;
+        Connection conn = null;
+        try {
+            conn = connectionUtil.getConnection();
+            // PreparedStatement preparedStatement = c.prepareStatement(sql);
+            st = conn.createStatement();
+            String sql = "insert into banklog (record_datetime,username,outamount,beforeamount)values(NOW(),\'"
+                    + id + "\'," + money + ",\'" + money_after + "\')";
+            st.execute(sql);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            connectionUtil.closeAll(st, conn);
+        }
     }
 }

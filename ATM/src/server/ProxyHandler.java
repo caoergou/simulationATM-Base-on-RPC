@@ -6,10 +6,11 @@ import java.lang.reflect.Proxy;
 
 import com.mysql.jdbc.Connection;
 
+import model.BaseDAO;
+
 public class ProxyHandler implements InvocationHandler {
 
-	static String beforeMethod = "";
-	static String afterMethod = "";
+
 
 	private RPCService object;
 
@@ -30,12 +31,16 @@ public class ProxyHandler implements InvocationHandler {
 			}
 			RPCServiceImpl service = new RPCServiceImpl();
 			Object result = method.invoke(service, args);
-
 			if (ServerConfig.isAllowLogging) {
-				System.out.println(args[0] + "执行了" + method.getName() + "操作");
+				if (method.getName().equals("OutMoney")) {
+					BaseDAO.OutMoneyLog((String)args[0],(double)args[1],(double)result);
+					System.out.println("已经存入数据库："+args[0] + "取出了" + args[1] );
+				}
+				
+				
 			}
 			if (ServerConfig.isEnableCheck) {
-				if (method.getName().equals("login") && (int) result == 0) {
+				if (method.getName().equals("login") && (int) result == 1) {
 					if (!ServerConfig.ErrorCount.containsKey((String) args[0])) {
 						ServerConfig.ErrorCount.put((String) args[0], 1);
 						result = 2;

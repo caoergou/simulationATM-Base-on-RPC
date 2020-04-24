@@ -39,7 +39,6 @@ public class MenuGUI implements ActionListener{
         mp0.add(new JLabel(""));
         mp0.add(new JLabel(""));
         mp0.add(new JLabel(""));
-        mp0.add(new JLabel("           Designed by 重案组           "));
 
         mp1=new JPanel();
         mp2=new JPanel();
@@ -90,10 +89,12 @@ public class MenuGUI implements ActionListener{
             DepositGUI depositGUI=new DepositGUI();
         }else if(cmd.equals("    转账    "))
         {
-
+            //也要皮一下
+            JOptionPane.showMessageDialog(null,"为防范金融诈骗，请前往营业厅办理转账服务！");
         }else if(cmd.equals("    改密    "))
         {
-
+            //再皮一下
+            JOptionPane.showMessageDialog(null,"更改密码请携带有效身份证件前往中国农业银行控江路营业厅！");
         }
         else if(cmd.equals("    退卡    ")){
 
